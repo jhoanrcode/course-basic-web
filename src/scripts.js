@@ -1,7 +1,7 @@
 let currentSlide = 0; 
-const totalSlides = 6;
+const totalSlides = 7;
 let currentSubSlide = 1;
-const subslides = [ 1, 5, 5, 4, 5, 1, 1];
+const subslides = [ 1, 5, 5, 4, 5, 1, 1, 1];
 let audioEnabled = true;
 let quizScore = 0;
 const answeredQuestions = {};
@@ -80,7 +80,7 @@ function goToSlide(n) {
     currentSubSlide = 1;
     playClick();
     updateSlideUI();
-    if (currentSlide > 0 && currentSlide < totalSlides){
+    if (currentSlide > 0 && currentSlide < (totalSlides - 2)){
         changeSwitchTab();
     }
   }
