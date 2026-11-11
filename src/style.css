@@ -550,6 +550,18 @@ body {
   justify-content: center;
 }
 
+.info-card-no-hover{
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
 .flip-card {
   background: transparent;
   perspective: 1000px;
@@ -686,6 +698,24 @@ body {
 .gen-btn-primary:hover:not(:disabled) {
   box-shadow: 0 6px 20px rgba(124, 58, 237, 0.6);
   transform: translateY(-2px) scale(1.02);
+}
+
+.gen-btn--rojo {
+  background: rgba(244, 63, 94, 0.2);
+  color: #fda4af;
+  border: 1px solid rgba(244, 63, 94, 0.3);
+}
+
+.gen-btn--amarillo {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fde68a;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.gen-btn--verde {
+  background: rgba(16, 185, 129, 0.2);
+  color: #6ee7b7;
+  border-color: rgba(16, 185, 129, 0.4);
 }
 
 .tool-icon-btn {
@@ -914,6 +944,22 @@ body {
   border-radius: 6px;
 }
 
+.activity-enunciate {
+  font-size: 0.83rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.activity-options-row {
+  display: flex;
+  gap: 24px;
+}
+
+.activity-options-row .gen-btn{
+  flex: 1;
+  justify-content: center;
+}
+
 .quiz-option-btn {
   width: 100%;
   text-align: left;
@@ -1053,9 +1099,48 @@ body {
   margin-bottom: 10px;
 }
 
+.bagde--azul {
+  justify-content: center;
+  background: rgba(6, 182, 212, 0.2);
+  color: #67e8f9;
+  border-color: rgba(6, 182, 212, 0.4);
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+}
+
 .obj-img{
   width: 100%;
   object-fit: contain;
+}
+
+.obj-img--mini{
+  max-height: 86px;
+}
+
+.more-margin > .match-item {
+  margin-top: 48px;
+}
+
+.match-item {
+  width: 100%;
+  margin-bottom: 12px;
+  min-height: 52px;
+  text-align: left;
+}
+
+.match-item.selected, .match-item.selected:hover {
+  border-color: #2878d0;
+  background: #133256;
+}
+
+.match-item.correct {
+  background: rgba(16, 185, 129, 0.2) !important;
+  border-color: var(--success) !important;
+  color: #34d399 !important;
+}
+
+.match-item:disabled {
+  opacity: 1;
 }
 
 .genially-stage:has(.slide.active[data-slide="2"]){
