@@ -1080,7 +1080,14 @@ body {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
-.video-container--portada{
+.video-tag{
+  aspect-ratio: 1 / 1;
+  max-width: 300px;
+  margin: 16px auto 0;
+  display: block;
+}
+
+.video-container--portada, .video-tag--portada{
   max-width: 400px;
   max-height: 160px;
 }
@@ -1088,6 +1095,31 @@ body {
 .video-container--resumen{
   max-width: 640px;
   max-height: 360px;
+}
+
+.video-container--resumen .video-tag{
+  max-width: 276px;
+  margin: 12px auto ;
+}
+
+.cards-grid-2-1 .video-tag, .cards-grid-2-2 .video-tag{
+  max-height: 300px;
+}
+.cards-grid-3 .video-tag{
+  max-height: 250px;
+}
+.cards-grid-3-1 .video-tag{
+  max-height: 210px;
+}
+.cards-grid-3-2 .video-tag, .cards-grid-3-3 .video-tag, .cards-grid-3-4 .video-tag{
+  max-height: 190px;
+}
+.cards-grid-3.grid-6 .video-tag{
+  margin: 0 auto ;
+  max-height: 140px;
+}
+.cards-grid-3.grid-6-2 .video-tag{
+  max-height: 170px;
 }
 
 .info-badge {
