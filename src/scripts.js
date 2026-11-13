@@ -94,6 +94,9 @@ function nextSlide() {
             currentSlide++;
             playClick();
             updateSlideUI();
+            if (currentSlide > 0 && currentSlide < (totalSlides - 2)){
+                changeSwitchTab();
+            }
         }
     } else { //Cambio de tab
         changeSwitchTab();
@@ -110,8 +113,9 @@ function prevSlide() {
             updateSlideUI();
         }
     }
-    changeSwitchTab();//Cambio de tab
-    
+    if (currentSlide > 0 && currentSlide < (totalSlides - 2)){
+        changeSwitchTab();
+    }
 }
 
 window.addEventListener('keydown', (e) => {
@@ -163,22 +167,22 @@ const modalData = {
   mod1_info: {
     title: 'Modulo 1: Introduccion a la Inteligencia Artificial',
     badge: 'Resumen',
-    body: '<div class="video-container video-container--resumen"><iframe src="https://www.youtube.com/embed/92XVwY54h5k?si=nzOCo1UOihr0hwgV" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>'
+    body: '<div class="video-container video-container--resumen"> <video class="video-tag" controls preload="none"> <source src="src/assets/video/mod_1/pantalla_4.mp4" type="video/mp4"></video> </div>'
   },
   mod2_info: {
     title: 'Modulo 2: Explorando las Ramas de la Inteligencia Artificial',
     badge: 'Resumen',
-    body: '<div class="video-container video-container--resumen"><iframe src="https://www.youtube.com/embed/92XVwY54h5k?si=nzOCo1UOihr0hwgV" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>'
+    body: '<div class="video-container video-container--resumen"> <video class="video-tag" controls preload="none"> <source src="src/assets/video/mod_2/pantalla_12.mp4" type="video/mp4"></video> </div>'
   },
   mod3_info: {
     title: 'Modulo 3: La Inteligencia Artificial en la vida cotidiana',
     badge: 'Resumen',
-    body: '<div class="video-container video-container--resumen"><iframe src="https://www.youtube.com/embed/92XVwY54h5k?si=nzOCo1UOihr0hwgV" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>'
+    body: '<div class="video-container video-container--resumen"> <video class="video-tag" controls preload="none"> <source src="src/assets/video/mod_3/pantalla_18.mp4" type="video/mp4"></video> </div>'
   },
   mod4_info: {
     title: 'Modulo 4: Sesgos, veracidad y uso responsable de la IA',
     badge: 'Resumen',
-    body: '<div class="video-container video-container--resumen"><iframe src="https://www.youtube.com/embed/92XVwY54h5k?si=nzOCo1UOihr0hwgV" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>'
+    body: '<div class="video-container video-container--resumen"> <video class="video-tag" controls preload="none"> <source src="src/assets/video/mod_4/pantalla_23.mp4" type="video/mp4"></video> </div>'
   },
   mod5_info: {
     title: 'Modulo 5: Evaluación final',
