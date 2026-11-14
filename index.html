@@ -1043,7 +1043,7 @@
             </div>
           </div>
           <div style="display: flex; align-items: center; gap: 32px; flex-direction: column; justify-content: space-around;">
-            <span id="quizScoreBadge" style="font-size: 0.82rem; font-weight: 700; color: #34d399; background: rgba(16, 185, 129, 0.2); padding: 5px 12px; border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.4);">Aciertos: 0 / 3</span>
+            <span id="quizScoreBadge" style="font-size: 0.82rem; font-weight: 700; color: #34d399; background: rgba(16, 185, 129, 0.2); padding: 5px 12px; border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.4);">Aciertos: 0 / 10</span>
             <button class="genially-pin" onclick="openModal('mod5_info')" title="Instrucciones del reto">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
 	              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -1055,93 +1055,12 @@
         </div>
 
         <div style="overflow-y: auto; max-height: calc(100% - 100px); padding-right: 6px;">
-          
-          <!-- PREGUNTA 1 -->
-          <div class="activity-box" style="margin-bottom: 14px;">
-            <div class="activity-title-bar">
-              <span class="activity-badge" style="background: rgba(124, 58, 237, 0.2); color: #c4b5fd; border-color: rgba(124, 58, 237, 0.4);">Pregunta 1 de 3</span>
-              <button class="gen-btn" style="padding: 4px 10px; font-size: 0.75rem;" onclick="toggleHint('hint1')">ðŸ’¡ Pista</button>
-            </div>
-            <p style="font-size: 0.88rem; font-weight: 600; color: #fff; margin-bottom: 10px;">
-              Un estudiante afirma que cualquier programa informÃ¡tico utiliza Inteligencia Artificial.
-            </p>
-            
-            <button class="quiz-option-btn" onclick="answerQ(1, 'A', false, this)">
-              <span class="quiz-opt-letter">A</span> Es correcto, porque toda automatizacion aprende de los datos
-            </button>
-            <button class="quiz-option-btn" onclick="answerQ(1, 'B', true, this)">
-              <span class="quiz-opt-letter">B</span> Es incorrecto, porque existen programas que siguen instrucciones fijas sin usar IA
-            </button>
-            <button class="quiz-option-btn" onclick="answerQ(1, 'C', false, this)">
-              <span class="quiz-opt-letter">C</span> Es incorrecto, porque la IA solo funciona con robots fÃ­sicos
-            </button>
-            <button class="quiz-option-btn" onclick="answerQ(1, 'D', false, this)">
-              <span class="quiz-opt-letter">D</span> Es correcto, porque todo programa procesa informacion
-            </button>
 
-            <div id="hint1" class="feedback-banner feedback-hint">
-              <strong>Pista:</strong> Distingue entre ejecutar instrucciones previamente definidas y utilizar tÃ©cnicas que aprenden o realizan tareas asociadas con la IA.
-            </div>
-            <div id="q1_fb" class="feedback-banner"></div>
+          <div id="exam-container"></div>
+          <div style="text-align: center; margin-top: 20px;">
+            <button id="btnVerificar" class="gen-btn" onclick="verificarRespuestas()"> ✓ Verificar respuestas </button>
           </div>
-
-          <!-- PREGUNTA 2 -->
-          <div class="activity-box" style="margin-bottom: 14px;">
-            <div class="activity-title-bar">
-              <span class="activity-badge" style="background: rgba(6, 182, 212, 0.2); color: #67e8f9; border-color: rgba(6, 182, 212, 0.4);">Pregunta 2 de 3</span>
-              <button class="gen-btn" style="padding: 4px 10px; font-size: 0.75rem;" onclick="toggleHint('hint2')">ðŸ’¡ Pista</button>
-            </div>
-            <p style="font-size: 0.88rem; font-weight: 600; color: #fff; margin-bottom: 10px;">
-              Â¿QuÃ© afirmacion describe mejor la relacion entre Machine Learning y Deep Learning?
-            </p>
-            
-            <button class="quiz-option-btn" onclick="answerQ(2, 'A', false, this)">
-              <span class="quiz-opt-letter">A</span> Machine Learning es una parte de Deep Learning
-            </button>
-            <button class="quiz-option-btn" onclick="answerQ(2, 'B', true, this)">
-              <span class="quiz-opt-letter">B</span> Deep Learning es una rama de Machine Learning que utiliza redes neuronales profundas
-            </button>
-            <button class="quiz-option-btn" onclick="answerQ(2, 'C', false, this)">
-              <span class="quiz-opt-letter">C</span> Son conceptos sin ninguna relacion
-            </button>
-            <button class="quiz-option-btn" onclick="answerQ(2, 'D', false, this)">
-              <span class="quiz-opt-letter">D</span> Deep Learning es el nombre de cualquier aplicacion informÃ¡tica
-            </button>
-
-            <div id="hint2" class="feedback-banner feedback-hint">
-              <strong>Pista:</strong> Piensa en cuÃ¡l de los dos conceptos abarca al otro y en el papel de las redes neuronales artificiales de mÃºltiples capas.
-            </div>
-            <div id="q2_fb" class="feedback-banner"></div>
-          </div>
-
-          <!-- PREGUNTA 3 -->
-          <div class="activity-box" style="margin-bottom: 14px;">
-            <div class="activity-title-bar">
-              <span class="activity-badge" style="background: rgba(16, 185, 129, 0.2); color: #6ee7b7; border-color: rgba(16, 185, 129, 0.4);">Pregunta 3 de 3</span>
-              <button class="gen-btn" style="padding: 4px 10px; font-size: 0.75rem;" onclick="toggleHint('hint3')">ðŸ’¡ Pista</button>
-            </div>
-            <p style="font-size: 0.88rem; font-weight: 600; color: #fff; margin-bottom: 10px;">
-              Una herramienta genera una explicacion sobre un tema cientÃ­fico y presenta una referencia que el estudiante no logra encontrar. Â¿QuÃ© deberÃ­a hacer primero?
-            </p>
-            
-            <button class="quiz-option-btn" onclick="answerQ(3, 'A', false, this)">
-              <span class="quiz-opt-letter">A</span> Aceptar la referencia porque parece acadÃ©mica y formal
-            </button>
-            <button class="quiz-option-btn" onclick="answerQ(3, 'B', false, this)">
-              <span class="quiz-opt-letter">B</span> Compartir la explicacion sin modificaciones
-            </button>
-            <button class="quiz-option-btn" onclick="answerQ(3, 'C', true, this)">
-              <span class="quiz-opt-letter">C</span> Verificar la referencia y contrastar la afirmacion con fuentes confiables
-            </button>
-            <button class="quiz-option-btn" onclick="answerQ(3, 'D', false, this)">
-              <span class="quiz-opt-letter">D</span> Suponer que todas las referencias generadas son falsas
-            </button>
-
-            <div id="hint3" class="feedback-banner feedback-hint">
-              <strong>Pista:</strong> Diferencia entre confiar en la apariencia elocuente de una respuesta y comprobar sus evidencias con fuentes verÃ­dicas.
-            </div>
-            <div id="q3_fb" class="feedback-banner"></div>
-          </div>
+          <div id="quizFinalResult" style="display: none; margin-top: 20px;"></div>
 
         </div>
       </div>
@@ -1207,23 +1126,12 @@
         </div>
 
         <div class="cards-grid-3" style="margin-bottom: 20px;">
-          <div class="info-card">
-            <div class="card-icon-box box-purple">ðŸŽ“</div>
-            <div class="card-title">1. Fundamentos Claros</div>
-            <div class="card-desc">La IA resuelve tareas adaptÃ¡ndose con datos; no es magia ni son reglas fijas preprogramadas.</div>
-          </div>
-          <div class="info-card">
-            <div class="card-icon-box box-cyan">ðŸš€</div>
-            <div class="card-title">2. Relacion ML y DL</div>
-            <div class="card-desc">Machine Learning es el motor de aprendizaje; Deep Learning aÃ±ade redes neuronales profundas para tareas complejas.</div>
-          </div>
-          <div class="info-card">
-            <div class="card-icon-box box-emerald">ðŸ›¡ï¸</div>
-            <div class="card-title">3. Pensamiento CrÃ­tico</div>
-            <div class="card-desc">La IA es un copiloto para potenciar el intelecto humano; la verificacion de fuentes y la Ã©tica son indispensables.</div>
-          </div>
+          <div class="info-card"></div>
+          <div class="info-card"></div>
+          <div class="info-card"></div>
         </div>
 
+        <!--
         <div style="text-align: center; padding: 20px; background: rgba(124, 58, 237, 0.1); border: 1px solid rgba(124, 58, 237, 0.3); border-radius: var(--radius-lg); margin-top: auto;">
           <h3 style="font-family: var(--font-heading); color: #fff; font-size: 1.25rem; margin-bottom: 6px;">Â¡Felicitaciones por completar el recorrido!</h3>
           <p style="font-size: 0.88rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 14px auto;">
@@ -1238,6 +1146,7 @@
             </button>
           </div>
         </div>
+        -->
       </div>
     </div> <!-- /slides-viewport -->
 
