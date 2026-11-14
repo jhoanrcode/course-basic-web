@@ -1037,6 +1037,12 @@ body {
   margin-top: 8px;
 }
 
+.feedback-hint--pista {
+  border: 1px solid rgb(40, 120, 208);
+  background: rgb(19, 50, 86);
+  color: rgb(124 171 227);
+}
+
 .embedded-slide-img {
   width: 100%;
   max-height: 170px;
@@ -1183,6 +1189,16 @@ body {
 }
 .genially-stage:has(.slide.active[data-slide="4"]){
   height: 778px;
+}
+
+.quiz-option-btn.selected {
+    border: 2px solid #8b5cf6;
+    background: rgba(139, 92, 246, 0.15);
+}
+
+.quiz-option-btn.locked {
+    cursor: not-allowed;
+    pointer-events: none;
 }
 
 @media (max-width: 900px) {
